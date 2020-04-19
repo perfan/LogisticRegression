@@ -25,7 +25,7 @@ def logisticRegression(X_train, Y_train, X_test, Y_test, num_iterations = 2000, 
      """
 
      # initialize parameters with zeros (≈ 1 line of code)
-     w, b = initialize_with_zeros(X_train.shape[0])
+     w, b = init.initialize_with_zeros(X_train.shape[0])
 
      # Gradient descent (≈ 1 line of code)
      parameters, grads, costs = opt.optimize(w, b, X_train, Y_train, num_iterations, learning_rate, print_cost = False)
