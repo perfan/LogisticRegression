@@ -1,3 +1,5 @@
+import sys
+sys.path.insert(1, '../../src/')
 import numpy as np
 import matplotlib.pyplot as plt
 import h5py
@@ -44,13 +46,10 @@ test_x = test_x_flatten/255.
 ### CONSTANTS DEFINING THE MODEL ####
 n_x = 12288     # num_px * num_px * 3
 n_y = 1
-layers_dims = [n_x, 20, 7, 5, n_y]
+layers_dims = [n_x, n_y]
 
 ### Learning ###
 parameters = L_layer_model(train_x, train_y, layers_dims, learning_rate = 0.0075, num_iterations = 2500, print_cost = True)
 pred_train = pr.predict(train_x, train_y, parameters)
 pred_test = pr.predict(test_x, test_y, parameters)
-
-
-### Plotting Learning Curve ###
 

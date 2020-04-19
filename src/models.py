@@ -50,6 +50,15 @@ def logisticRegression(X_train, Y_train, X_test, Y_test, num_iterations = 2000, 
           "b" : b,
           "learning_rate" : learning_rate,
           "num_iterations": num_iterations}
+
+     ### Plotting Learning Curve ###
+     costs = np.squeeze(d['costs'])
+     plt.plot(costs)
+     plt.ylabel('cost')
+     plt.xlabel('iterations (per hundreds)')
+     plt.title("Learning rate =" + str(d["learning_rate"]))
+     plt.savefig("./results/Learning_Curve.png")
+     plt.show()
     
      return d
 
@@ -150,7 +159,7 @@ def L_layer_model(X, Y, layers_dims, learning_rate, num_iterations, print_cost=F
     Returns:
     parameters -- parameters learnt by the model. They can then be used to predict.
     """
-
+    print(layers_dims)
     np.random.seed(1)
     costs = []                         # keep track of cost
     

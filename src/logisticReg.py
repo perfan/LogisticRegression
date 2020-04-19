@@ -41,11 +41,3 @@ test_set_x = test_set_x_flatten/255.
 ### Learning ###
 d = logisticRegression(train_set_x, train_set_y, test_set_x, test_set_y, num_iterations = 2000, learning_rate = 0.005, print_cost = True)
 
-### Plotting Learning Curve ###
-costs = np.squeeze(d['costs'])
-plt.plot(costs)
-plt.ylabel('cost')
-plt.xlabel('iterations (per hundreds)')
-plt.title("Learning rate =" + str(d["learning_rate"]))
-plt.savefig("./results/Learning_Curve.png")
-plt.show()
