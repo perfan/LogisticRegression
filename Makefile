@@ -13,4 +13,4 @@ clean-build:
 clean: clean-pyc
 
 run:
-	python3 ${SRC_DIR}logisticReg.py 
+	python3 ${SRC_DIR}logisticRegDNN.py 

@@ -16,7 +16,7 @@ grads -- dictionary containing the gradients of the weights and bias with respec
 costs -- list of all the costs computed during the optimization, this will be used to plot the learning curve.
 """
 
-from propagate import propagate
+from forwardPropagate import propagate
 
 def optimize(w, b, X, Y, num_iterations, learning_rate, print_cost = False):
 
